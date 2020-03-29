@@ -15,11 +15,11 @@ Ce document s'intéresse à la réalisation d'une AFM. Cet exercice se base sur 
 
 # Jeu de données
 
-Les jeux de données employés sont à votre disposition dans le dossier `data`. Les plus attentifs d'entre vous auront remarqué une similitude avec les jeux de données proposés dans la list `doubs` du package `ade4`. En effet, les données qui vont sont proposées dérivent du `doubs`
+Les jeux de données employés sont à votre disposition dans le dossier `data`. Les plus attentifs d'entre vous auront remarqué une similitude avec les jeux de données proposés dans la list `doubs` du package `ade4`. En effet, les données qui vont sont proposées dérivent du `doubs`.
 
 # Analyses
 
-> Avant de débuter votre analyse, ajoutez dans le code SciViews lié à l'AFM mis à votre disposition dans le bookdown : <http://biodatascience-course.sciviews.org/sdd-umons2/analyse-factorielle-multiple-afm.html>
+> Avant de débuter votre analyse, ajoute le code SciViews lié à l'AFM mis à votre disposition dans le bookdown : <http://biodatascience-course.sciviews.org/sdd-umons2/analyse-factorielle-multiple-afm.html>
 
 ```{r sciviews-mfa}
 
@@ -30,11 +30,6 @@ Les jeux de données employés sont à votre disposition dans le dossier `data`.
 ```{r}
 spe <- read()
 envi <- read()
-```
-
-> Si vos tableaux comprennent une colonne relative au station, transformez cette dernière en nom des lignes avec la fonction `column_to_rownames()`. Vous pouvez également prendre la décision de supprimer cette colonne.
-
-```{r rownames}
 ```
 
 > Utilisez les fonctions ci-dessous afin de découvrir les données. Répondez au questions suivantes : Combien y a t'il de stations ? Combien y a t'il d'espèces étudiées ? Quels est le nombre maximum d'observations sur le stations (sans tenir compte des espèces.) ? Y a t'il une station qui sans aucune observations d'oiseaux recensés ? ... Commentez en maximum 4 lignes.
@@ -70,7 +65,7 @@ spe_env <-
 
 > Maintenant que vous avez un tableau de données unique (**astuce: votre tableau doit comprendre 29). Vous pouvez réalisez votre MFA.
 
-> Nous allons débuter par réaliser 3 groupes dans nos données : le groupe lié à la communauté de poisson, le groupe lié à la géogrpahie et le groupe lié à la qualité de l'eau. Utilisez le nom et la signification des variables pour définir vos trois groupes.
+> Nous allons débuter par réaliser 3 groupes dans nos données : le groupe lié à la communauté de poisson, le groupe lié à la géographie et le groupe lié à la qualité de l'eau. Utilisez le nom et la signification des variables pour définir vos trois groupes.
 
 ```{r}
 names(spe_env)
