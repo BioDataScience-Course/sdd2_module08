@@ -10,6 +10,6 @@ Il est possible que ce document évolue au cours du temps. N'hésitez pas à vé
 
 - Au sein du fichier `fish_mfa.Rmd`, complétez les zones manquantes. Ce fichier se trouve dans le dossier `analysis`. 
 
-- au sein du fichier `....Rmd`, complétez les zones manquantes. Ce fichier se trouve dans le dossier `analysis` et s'intéresse aux indices de biodiversité.
+- au sein du fichier `fish_diversity.Rmd`, complétez les zones manquantes. Ce fichier se trouve dans le dossier `analysis` et s'intéresse aux indices de biodiversité.
 
 - Au sein du fichier `open_data.Rmd`, Complétez ce document. Ce fichier se trouve dans le dossier `analysis`.
