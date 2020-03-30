@@ -32,7 +32,7 @@ spe <- read()
 envi <- read()
 ```
 
-> Utilisez les fonctions ci-dessous afin de découvrir les données. Répondez au questions suivantes : Combien y a t'il de stations ? Combien y a t'il d'espèces étudiées ? Quels est le nombre maximum d'observations sur le stations (sans tenir compte des espèces.) ? Y a t'il une station qui sans aucune observations d'oiseaux recensés ? Commentez en maximum 4 lignes.
+> Utilisez les fonctions ci-dessous afin de découvrir les données. Répondez au questions suivantes : Combien y a t'il de stations ? Combien y a t'il d'espèces étudiées ? Quels est le nombre maximum d'observations sur le stations (sans tenir compte des espèces.) ? Y a t'il une station qui n' a  aucune observations recensées ? Commentez en maximum 4 lignes.
 
 ```{r}
 # il existe de nombreuses fonctions dans R pour découvrir des nouvelles données. 
@@ -72,7 +72,7 @@ names(spe_env)
 
 **Astuce 1 : Le premier groupe va comprendre 28 colonnes. Le second groupe va comprendre 3 ou 4 variables et le dernier groupe va comprendre 7 ou 6.**
 
-**Astuce 2 : Les variables quantitative utilisées doivent être standaridisé. Les variables de dénombrement du plancton ne doivent pas être standardisées. Ces variables ont déjà été standardisé par la méthode de Hellinger.**
+**Astuce 2 : Les variables quantitatives utilisées doivent être standardisées. Les variables de dénombrement de poissons ne doivent pas être standardisées. Ces variables ont déjà été standardisées par la méthode de Hellinger.**
 
 **Astuce 3: Réduisez votre AFM en utilisant que les deux premières dimensions des ACP  avec l'argument `nd = 2`**
 
