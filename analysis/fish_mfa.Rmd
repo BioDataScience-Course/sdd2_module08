@@ -32,7 +32,7 @@ spe <- read()
 envi <- read()
 ```
 
-> Utilisez les fonctions ci-dessous afin de découvrir les données. Répondez au questions suivantes : Combien y a t'il de stations ? Combien y a t'il d'espèces étudiées ? Quels est le nombre maximum d'observations sur le stations (sans tenir compte des espèces.) ? Y a t'il une station qui sans aucune observations d'oiseaux recensés ? ... Commentez en maximum 4 lignes.
+> Utilisez les fonctions ci-dessous afin de découvrir les données. Répondez au questions suivantes : Combien y a t'il de stations ? Combien y a t'il d'espèces étudiées ? Quels est le nombre maximum d'observations sur le stations (sans tenir compte des espèces.) ? Y a t'il une station qui sans aucune observations d'oiseaux recensés ? Commentez en maximum 4 lignes.
 
 ```{r}
 # il existe de nombreuses fonctions dans R pour découvrir des nouvelles données. 
@@ -50,12 +50,11 @@ colSums(...)
 
 ```
 
-> Avant de combiner nos tableaux, ile st intéressant de standardisé votre tableau de données `spe`. Sans rentrer dans le détails, nous vous proposons d'employer la fonction vegan::decostand(DF, "hellinger")
+> Avant de combiner nos tableaux, il est intéressant de standardisé votre tableau de données `spe`. Sans rentrer dans le détails, nous vous proposons d'employer la fonction vegan::decostand(DF, "hellinger"). N'hésitez pas à vous renseigner sur cette méthode. 
 
 ```{r standardisation}
 spe <- decostand(spe, "hellinger")
 ```
-
 
 > Combinez les deux tableaux de données (spe, env). Si vous avez retiré une ligne dans un des deux tablaeux, vous devez la retirez dans le second tableau afin de combiner facilement vos données.
 
@@ -63,7 +62,7 @@ spe <- decostand(spe, "hellinger")
 spe_env <- 
 ```
 
-> Maintenant que vous avez un tableau de données unique (**astuce: votre tableau doit comprendre 29). Vous pouvez réalisez votre MFA.
+> Maintenant que vous avez un tableau de données unique (**astuce: votre tableau doit comprendre 29**). Vous pouvez réalisez votre MFA.
 
 > Nous allons débuter par réaliser 3 groupes dans nos données : le groupe lié à la communauté de poisson, le groupe lié à la géographie et le groupe lié à la qualité de l'eau. Utilisez le nom et la signification des variables pour définir vos trois groupes.
 
@@ -71,13 +70,15 @@ spe_env <-
 names(spe_env)
 ```
 
-**Astuce : Le premier groupe va comprendre 28 colonnes. Le second groupe va comprendre 3 ou 4 variables et le dernier groupe va comprendre 7 ou 6.
+**Astuce 1 : Le premier groupe va comprendre 28 colonnes. Le second groupe va comprendre 3 ou 4 variables et le dernier groupe va comprendre 7 ou 6.**
+
+**Astuce 2 : Les variables quantitative utilisées doivent être standaridisé. Les variables de dénombrement du plancton ne doivent pas être standardisées. Ces variables ont déjà été standardisé par la méthode de Hellinger.**
+
+**Astuce 3: Réduisez votre AFM en utilisant que les deux premières dimensions des ACP  avec l'argument `nd = 2`**
 
 ```{r}
-spe_mfa <- MFA(base = as.data.frame(spe_env), group= c( , , ),
-               type = c("c","s","s"), name.group = c("Fish community","Geography","Water quality"), graph = FALSE)
+spe_mfa <- mfa()
 ```
-
 
 > Réalisez et décrivez le graphique des éboulis en maximum 2 lignes.
 
